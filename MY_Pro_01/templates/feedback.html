@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>FeedBack</title>
+</head>
+<body>
+{% block content %}
+<div class="container">
+<div class="row">
+    <div class="col-md-offset-3 col-md-6">
+        <form method="POST">
+            <h2>Please Enter Below Details</h2>
+            {% csrf_token %}
+            {{ fform }}
+            <br>
+            <center>
+            <input type="submit" value="SUBMIT" class="btn btn-success">
+            <input type="reset" value="CLEAR" class="btn btn-danger">
+            </center>
+        </form>
+    </div>
+</div>
+</div>
+{% endblock %}
+</body>
+</html>
